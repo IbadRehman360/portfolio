@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Section1 from "./Section1";
 import Section2 from "./section2";
 import Section3 from "./section3";
