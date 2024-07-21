@@ -53,7 +53,7 @@ const Header = (props) => {
               </span>
             </ReactScrollLink>
           ))}
-          <a href={"/resume.pdf"} target={"_blank"} rel="noreferrer">
+          <a href={"/"} target={"_blank"} rel="noreferrer">
             <button className="rounded border font-Text2 border-AAsecondary hover:bg-ResumeButtonHover py-2 sm:py-4 px-5 sm:px-10 text-xs text-AAsecondary">
               Resume
             </button>
