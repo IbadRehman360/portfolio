@@ -4,14 +4,13 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link as ReactScrollLink } from "react-scroll";
 
-const Header = (props) => {
+const Header = () => {
   const RefNavBar = useRef(null);
   const [ShowElement, setShowElement] = useState(true);
   const [rotate, setRotate] = useState(false);
 
   return (
     <>
-      {/* Mobile visible Navbar component */}
       <motion.div
         initial={{ x: "100%" }}
         animate={rotate ? { x: "0" } : { x: "100%" }}
@@ -61,7 +60,6 @@ const Header = (props) => {
         </div>
       </motion.div>
 
-      {/* This parent element for Menu */}
       <motion.div
         ref={RefNavBar}
         initial={{ opacity: 0 }}
@@ -73,7 +71,6 @@ const Header = (props) => {
           ShowElement ? `bg-opacity-70 shadow-xl` : `bg-opacity-0 `
         } bg-AAprimary flex justify-between px-6 sm:px-12 py-2 sm:py-4 transition duration-4000 translate-y-0 z-20`}
       >
-        {/* Logo */}
         <motion.div
           initial={{ y: 0, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -102,7 +99,6 @@ const Header = (props) => {
           ))}
         </motion.div>
 
-        {/* Hide icon Designed by me */}
         <div
           className="md:hidden text-white space-y-2 left-0 hover:cursor-pointer mt-2"
           onClick={() => {
@@ -145,7 +141,6 @@ const Header = (props) => {
           </div>
         </div>
 
-        {/* Desktop Menu */}
         <div className="font-mono text-xs md:flex hidden flex-row items-center space-x-8">
           {["About", "Experience", "Work", "Contact"].map((section, index) => (
             <motion.div

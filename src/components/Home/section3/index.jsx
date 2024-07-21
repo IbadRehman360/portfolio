@@ -8,7 +8,6 @@ export default function Section3() {
       data-aos="fade-up"
       className="flex flex-col items-center justify-center py-24 space-y-12 bg-AAprimary"
     >
-      {/* Title "Where I've Worked" */}
       <section className="flex flex-row items-center">
         <div className="flex flex-row items-center">
           <ArrowIcon
@@ -25,14 +24,11 @@ export default function Section3() {
         </span>
         <div className="bg-gray-400 h-[0.2px] w-16 sm:w-44 md:w-80"></div>
       </section>
-      {/* Where I've Worked Content section */}
       <section
         className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0
         justify-center md:justify-center items-center md:items-start"
       >
-        {/* Left side of Where I've Worked, contains the bar and name of companies */}
         <CompaniesBar />
-        {/* Description for The job */}
         <Option1 />
       </section>
     </div>

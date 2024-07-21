@@ -49,9 +49,9 @@ export default function Section2() {
                 developer. My journey began during my college years, from which
                 I graduated in 2024. While in college, I started developing
                 custom apps and built my expertise from the ground up.
-                Throughout my journey, I've worked with multiple companies and
-                clients, honing my skills and expanding my knowledge. Balancing
-                job responsibilities and side projects.
+                Throughout my journey, I&lsquo;ve worked with multiple companies
+                and clients, honing my skills and expanding my knowledge.
+                Balancing job responsibilities and side projects.
               </span>
             </div>
             <div className="font-Header">

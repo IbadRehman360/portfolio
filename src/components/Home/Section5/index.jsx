@@ -214,7 +214,6 @@ export default function Section5() {
             data-aos="fade-up"
             className="relative md:grid md:grid-cols-12 w-full md:h-96"
           >
-            {/* Left image */}
             <div className="hidden bg-AAprimary z-10 py-4 absolute md:grid grid-cols-12 w-full h-full content-center">
               <div
                 className={`relative rounded w-full h-full ${
@@ -233,8 +232,6 @@ export default function Section5() {
                 />
               </div>
             </div>
-
-            {/* Right Content */}
             <div className="md:absolute py-4 md:grid md:grid-cols-12 w-full h-full content-center">
               <div className="absolute w-full h-full bg-opacity-70 z-0">
                 <div className="relative w-full h-full">
