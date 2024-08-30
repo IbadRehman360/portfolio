@@ -3,6 +3,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link as ReactScrollLink } from "react-scroll";
+import Link from "next/link";
 
 const Header = () => {
   const RefNavBar = useRef(null);
@@ -52,11 +53,11 @@ const Header = () => {
               </span>
             </ReactScrollLink>
           ))}
-          <a href={"/"} target={"_blank"} rel="noreferrer">
+          <Link href={"/Ibad_resume.pdf"} target={"_blank"} rel="noreferrer">
             <button className="rounded border font-Text2 border-AAsecondary hover:bg-ResumeButtonHover py-2 sm:py-4 px-5 sm:px-10 text-xs text-AAsecondary">
               Resume
             </button>
-          </a>
+          </Link>
         </div>
       </motion.div>
 
@@ -84,7 +85,7 @@ const Header = () => {
             initial={{ x: 1 }}
             className="absolute h-full w-full flex justify-center items-center text-lg font-Header text-AAsecondary"
           >
-            A
+            I
           </motion.span>
           {[-30, 90, 30, -30, 30, 90].map((rotate, index) => (
             <motion.div
@@ -167,7 +168,7 @@ const Header = () => {
               </ReactScrollLink>
             </motion.div>
           ))}
-          <a href={"/resume.pdf"} target={"_blank"} rel="noreferrer">
+          <Link href={"/Ibad_resume.pdf"} target={"_blank"} rel="noreferrer">
             <motion.button
               initial={{ y: -40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -179,7 +180,7 @@ const Header = () => {
             >
               Resume
             </motion.button>
-          </a>
+          </Link>
         </div>
       </motion.div>
     </>

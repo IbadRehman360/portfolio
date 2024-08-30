@@ -1,5 +1,6 @@
 import React from "react";
 import ArrowIcon from "../../Icons/ArrowIcon";
+import Link from "next/link";
 
 export default function Section6() {
   return (
@@ -28,11 +29,11 @@ export default function Section6() {
         my best to get back to you!
       </p>
       <div className="pt-4">
-        <a href="mailto:ibadhashim4@gmail.com" target="_blank" rel="noreferrer">
+        <Link href="mailto:ibadhashim4@gmail.com" target="_blank" rel="noreferrer">
           <button className="font-mono text-sm text-AAsecondary border-AAsecondary px-8 py-4 border-[1.5px] rounded">
             Say Hello
           </button>
-        </a>
+        </Link>
       </div>
     </div>
   );

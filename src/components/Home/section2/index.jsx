@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function Section2() {
   const technologies = [
-    ["Next.js", "JavaScript (ES6+)", "Tailwind CSS", "React.js", "Mongodb"],
+    ["Next.js, React.js", "Vue.js", "JavaScript (ES6+)", "Tailwind CSS", "React Native, Expo Go", ],
     [
       "Node.js",
-      "Framer Motion",
-      "Express.js",
-      "Nest.js",
+      "Nest.js, Express.js",
+      "Mongodb",
       "Supabase - Firebase",
+      "Framer Motion",
     ],
   ];
 

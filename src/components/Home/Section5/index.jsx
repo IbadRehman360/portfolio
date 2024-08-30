@@ -2,7 +2,6 @@ import ArrowIcon from "@/components/Icons/ArrowIcon";
 import ExternalLink from "@/components/Icons/ExternalLink";
 import GithubIcon from "@/components/Icons/GithubIcon";
 import Image from "next/image";
-import { Link } from "react-scroll";
 import EasyConnection from "/public/projects/EasyConnection.png";
 import Gfacility from "/public/projects/Gfacility.png";
 import Halalcsorg from "/public/projects/Halalcsorg.png";
@@ -15,6 +14,7 @@ import PerilGroup from "/public/projects/PerilGroup.png";
 import SurgiMakers from "/public/projects/SurgiMakers.png";
 import Trademarks from "/public/projects/Trademarks.png";
 import TripKarao from "/public/projects/TripKarao.png";
+import Link from "next/link";
 
 const projects = [
   {
@@ -186,11 +186,12 @@ const projects = [
   //   },
 ];
 
+
 export default function Section5() {
   return (
     <div
       id="SomethingIveBuiltSection"
-      className="flex flex-col xl:space-y-28 space-y-12 bg-AAprimary w-full 2xl:px-72 lg:px-24 md:px-16 sm:px-16 py-32 px-4"
+      className="flex flex-col   xl:space-y-28 space-y-12 bg-AAprimary w-full 2xl:px-72 lg:px-24 md:px-16 sm:px-16 py-32 px-4"
     >
       {/* Title */}
       <div data-aos="fade-up" className="flex flex-row items-center md:px-0">
@@ -220,86 +221,82 @@ export default function Section5() {
                   index % 2 === 0 ? "col-span-7" : "col-start-6 col-span-7"
                 }`}
               >
-                <Link href={project.projectUrl} target="_blank">
-                  <div className="absolute w-full h-full rounded bg-AAprimary transition-opacity opacity-15 hover:opacity-0 hover:cursor-pointer duration-300"></div>
+                {console.log(project.projectUrl)}
+                <Link href={project.projectUrl} target="_blank"  >
+                    <div className="absolute w-full h-full rounded bg-AAprimary transition-opacity opacity-15 hover:opacity-0 hover:cursor-pointer duration-300"></div>
+                    <Image
+                      src={project.imageUrl}
+                      width={800}
+                      height={800}
+                      alt="Project Screenshot"
+                      className="w-full rounded object-cover h-full"
+                    />
                 </Link>
-                <Image
-                  src={project.imageUrl}
-                  width={800}
-                  height={800}
-                  alt="Project Screen shot"
-                  className="w-full rounded object-cover h-full"
-                />
               </div>
             </div>
-            <div className="md:absolute py-4 md:grid md:grid-cols-12 w-full h-full content-center">
-              <div className="absolute w-full h-full bg-opacity-70 z-0">
-                <div className="relative w-full h-full">
-                  <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
-                  <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
-                  <Image
-                    width={800}
-                    height={800}
-                    src={project.imageUrl}
-                    alt="Project Screen shot"
-                    className="w-full object-cover h-full"
-                  />
+            <Link target="_blank" href={project.projectUrl}>
+              <div className="block bg-orange-500 md:absolute py-4 md:grid md:grid-cols-12 w-full h-full content-center">
+                <div className="absolute w-full h-full bg-opacity-70 z-0">
+                  <div className="relative w-full h-full">
+                    <div className="absolute w-full h-full bg-AAsecondary opacity-10 z-10"></div>
+                    <div className="absolute w-full h-full bg-AAprimary opacity-80 z-10"></div>
+                    <Image
+                      width={800}
+                      height={800}
+                      src={project.imageUrl}
+                      alt="Project Screenshot"
+                      className="w-full object-cover h-full"
+                    />
+                  </div>
                 </div>
-              </div>
-
-              <div
-                className={`px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6 ${
-                  index % 2 === 0
-                    ? "xl:col-start-7 col-start-5 col-span-8 md:items-end"
-                    : "col-span-8 md:items-start"
-                } flex flex-col items-start space-y-3`}
-              >
-                <div className="flex flex-col   space-y-1  z-10">
-                  <span
-                    className={`text-AAsecondary ${
-                      index % 2 === 0 ? " md:text-right" : ""
-                    }   text-start text-base`}
-                  >
-                    {project.title}
-                  </span>
-                  <Link href={project.projectUrl} target="_blank">
+                <div
+                  className={`px-8 pt-8 sm:pt-12 md:py-0 xl:col-span-6 ${
+                    index % 2 === 0
+                      ? "xl:col-start-7 col-start-5 col-span-8 md:items-end"
+                      : "col-span-8 md:items-start"
+                  } flex flex-col items-start space-y-3`}
+                >
+                  <div className="flex flex-col space-y-1 z-10">
+                    <span
+                      className={`text-AAsecondary ${
+                        index % 2 === 0 ? " md:text-right" : ""
+                      } text-start text-base`}
+                    >
+                      {project.title}
+                    </span>
                     <span className="md:text-gray-200 text-AAsecondary font-bold text-xl hover:cursor-pointer">
                       {project.title}
                     </span>
-                  </Link>
-                </div>
-                <div className="w-full md:bg-AAtertiary rounded-md py-6 md:p-6 z-10">
-                  <p
-                    className={`text-gray-300 md:text-gray-400  ${
+                  </div>
+                  <div className="w-full md:bg-AAtertiary rounded-md py-6 md:p-6 z-10">
+                    <p
+                      className={`text-gray-300 md:text-gray-400 ${
+                        index % 2 === 0 ? " md:text-right" : ""
+                      } text-left`}
+                    >
+                      {project.description}
+                    </p>
+                  </div>
+                  <ul
+                    className={`flex flex-wrap w-full text-gray-300 md:text-gray-400 ${
                       index % 2 === 0 ? " md:text-right" : ""
-                    } text-left t`}
+                    } text-sm font-Text2`}
                   >
-                    {project.description}
-                  </p>
-                </div>
-                <ul
-                  className={`flex flex-wrap w-full text-gray-300 md:text-gray-400 ${
-                    index % 2 === 0 ? " md:text-right" : ""
-                  } text-sm font-Text2   `}
-                >
-                  {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="pr-4 z-10">
-                      {tag}
-                    </span>
-                  ))}
-                </ul>
-                <div className="z-10 flex flex-row space-x-5">
-                  {project.githubUrl && <GithubIcon link={project.githubUrl} />}
-                  <Link
-                    href={project.projectUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <ExternalLink url="" />
-                  </Link>
+                    {project.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="pr-4 z-10">
+                        {tag}
+                      </span>
+                    ))}
+                  </ul>
+                  <div className="z-10 flex flex-row space-x-5">
+                    {project.githubUrl && <GithubIcon link={project.githubUrl} />}
+                    {/* <Link href={project.projectUrl} target="_blank" rel="noreferrer">
+                        <ExternalLink url={project.projectUrl} />
+                    </Link> */}
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </div>

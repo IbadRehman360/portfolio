@@ -3,8 +3,8 @@ import ArrowIcon from "@/components/Icons/ArrowIcon";
 export default function Option1() {
   const tasks = [
     {
-      text: "Worked on the front-end development using Next.js, Tailwind CSS, React.js, and Framer Motion.",
-      keywords: ["Next.js", "Tailwind CSS", "React.js", "Framer Motion"],
+      text: "Worked on the front-end development using Next.js, Vue.js, Tailwind CSS, React.js, and Framer Motion.",
+      keywords: ["Next.js", "Vue.js", "Tailwind CSS", "React.js", "Framer Motion"],
     },
     {
       text: "Managed back-end development with Node.js, Express.js, Nest.js, MongoDB, Supabase, and Firebase.",
@@ -22,8 +22,8 @@ export default function Option1() {
       keywords: ["quality assurance"],
     },
     {
-      text: "Gained expertise in full-stack development by handling both front-end and back-end responsibilities.",
-      keywords: ["full-stack development"],
+      text: "Gained expertise in Cross-platform development by handling both front-end and back-end responsibilities.",
+      keywords: ["Cross-platform development"],
     },
   ];
 

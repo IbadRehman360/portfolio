@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import GithubIcon from "../../Icons/GithubIcon";
 import LinkedinIcon from "../../Icons/LinkedinIcon";
 import YoutubeIcon from "../../Icons/YoutubeIcon";
+import Link from "next/link";
 
 const IconClickableWithAnimation = ({ href, Icon }) => {
   return (
@@ -13,9 +14,9 @@ const IconClickableWithAnimation = ({ href, Icon }) => {
       }}
       className=""
     >
-      <a href={href} className="" target="_blank" rel="noreferrer">
+      <Link href={href} className="" target="_blank" rel="noreferrer">
         <Icon className="w-6 h-6 text-gray-400 hover:text-AAsecondary fill-current hover:cursor-pointer" />
-      </a>
+      </Link>
     </motion.div>
   );
 };
@@ -63,7 +64,7 @@ export default function section4() {
             }}
             className=""
           >
-            <a
+            <Link
               href="mailto:ibadhashim4@gmail.com"
               target="_blank"
               rel="noreferrer"
@@ -72,7 +73,7 @@ export default function section4() {
                 Ibadhashim4<span className="text-AAsecondary ">@</span>gmail
                 <span className="text-AAsecondary">.</span>com
               </span>
-            </a>
+            </Link>
           </motion.div>
           <div className="h-24 w-0.5 bg-gray-400"></div>
         </div>
